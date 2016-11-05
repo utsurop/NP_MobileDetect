@@ -2,18 +2,21 @@
 
 /*
 
+* Sat Nov  5 2016 utsuro <utsuro.youyou@gmail.com> 0.2
+- update to NP_MobileDetect Ver.2.8.22
+
 * sun jan 23 2016 utsuro <utsuro.youyou@gmail.com> 0.1
 - NP_MobileDetect for NucleusPlugin first release
 
 */
 
 class NP_MobileDetect extends NucleusPlugin {
-	private $mobileDetectVersion = '2.8.19';
+	private $mobileDetectVersion = '2.8.22';
 	private $detect;
 
 	public function getName()        { return 'MobileDetect'; }
 	public function getAuthor()      { return 'utsuro'; }
-	public function getVersion()     { return '0.1'; }
+	public function getVersion()     { return '0.2'; }
 	public function getDescription() { return ''._NP_MOBILEDETECT_DESCRIPTION_.''; }
 	public function getURL()         { return 'https://github.com/utsurop/NP_MobileDetect'; }
 
@@ -34,7 +37,8 @@ class NP_MobileDetect extends NucleusPlugin {
 		$this->language = $includeFile;
 
 		// Mobile Detect
-		require_once($this->getDirectory() . "Mobile-Detect-{$this->mobileDetectVersion}/Mobile_Detect.php");
+		$mobiledetectPath = is_link("{$this->getDirectory()}Mobile-Detect") ? "{$this->getDirectory()}Mobile-Detect/Mobile_Detect.php" : "{$this->getDirectory()}Mobile-Detect-{$this->mobileDetectVersion}/Mobile_Detect.php";
+		require_once($mobiledetectPath);
 		$this->detect = new Mobile_Detect;
 
 	}
