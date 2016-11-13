@@ -19,7 +19,7 @@ class NP_MobileDetect extends NucleusPlugin {
 
 	public function getName()        { return 'MobileDetect'; }
 	public function getAuthor()      { return 'utsuro'; }
-	public function getVersion()     { return '0.2'; }
+	public function getVersion()     { return '0.3'; }
 	public function getDescription() { return ''._NP_MOBILEDETECT_DESCRIPTION_.''; }
 	public function getURL()         { return 'https://github.com/utsurop/NP_MobileDetect'; }
 
