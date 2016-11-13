@@ -2,8 +2,11 @@
 
 /*
 
+* Sun Nov 13 2016 utsuro <utsuro.youyou@gmail.com> 0.3
+- update to MobileDetect Ver.2.8.24
+
 * Sat Nov  5 2016 utsuro <utsuro.youyou@gmail.com> 0.2
-- update to NP_MobileDetect Ver.2.8.22
+- update to MobileDetect Ver.2.8.22
 
 * sun jan 23 2016 utsuro <utsuro.youyou@gmail.com> 0.1
 - NP_MobileDetect for NucleusPlugin first release
@@ -11,7 +14,7 @@
 */
 
 class NP_MobileDetect extends NucleusPlugin {
-	private $mobileDetectVersion = '2.8.22';
+	private $mobileDetectVersion = '2.8.24';
 	private $detect;
 
 	public function getName()        { return 'MobileDetect'; }
